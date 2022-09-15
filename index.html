@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        #series{
+            display: none;
+        }
+        #series2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form name="form1">
+        <select name="sel2" onchange="getsel()">
+        <option>Categories</option>
+        <option value="samsung" >samsung</option>
+        <option value="Nokia" >Nokia</option>
+        <option value="Motrolla">Motrolla</option>
+        <option value="Iphone">Iphone</option>
+
+        
+
+    </select>
+
+
+
+    
+<p id="lab1"></p>
+</form>
+
+
+<form  name="form2">
+    <select name="sel3"  onchange="end()" id="series">
+        <option>Categories</option>
+
+        <option value="s10" >s10</option>
+        <option value="s20" >s20</option>
+        <option value="s30">s30</option>
+    
+        
+    
+
+
+    </select>
+    <p id="lab2"></p>
+</form>
+
+<form  name="form3">
+    <select name="sel4"  onchange="end2()" id="series2">
+        <option>Categories</option>
+
+        <option value="N10" >N10</option>
+        <option value="N20" >N20</option>
+        <option value="N30">N30</option>
+    
+    
+
+
+    </select>
+    <p id="lab2"></p>
+</form>
+
+    <script>
+var arr=[
+
+{
+    animalType: "cat",
+    ss10:[
+        
+    "Rate:10000","1","uni",
+],
+
+ss20:[
+"Rate:20000","2","uni",
+],
+ss30:[
+"Rate:30000","3","uni",
+],
+
+   
+},
+{
+    animalType: "cat",
+    nn10:[
+        
+    "Rate:10000","1","uni",
+],
+
+nn20:[
+"Rate:20000","2","uni",
+],
+nn30:[
+"Rate:30000","3","uni",
+],
+
+   
+},
+{
+    animalType: "bell",
+    names:[
+     "hamza",
+     "2",
+      "uni"
+    ]
+},
+{
+    animalType: "dog",
+    names:[
+     "haji",
+     "3",
+      "uni"
+    ]
+},
+
+
+
+
+]
+var x=  document.getElementById('series');
+var y=  document.getElementById('series2');
+
+        function getsel(){
+            // var abs = arr[0].class;
+            // console.log(abs);
+            // document.getElementById('lab1').innerHTML=form1.sel2[form1.sel2.selectedIndex].text;
+
+            // for(i=0;i<=arr[i].length;i++){
+
+              
+            if(form1.sel2[form1.sel2.selectedIndex].text == "samsung"){
+                x.style.display = 'block';
+                
+            }
+        //    else if(form1.sel2[form1.sel2.selectedIndex].text == "Nokia"){
+        //  var aa =   document.getElementById('lab1').innerHTML=arr[1].names;
+        //     console.log(aa);
+        //     }
+            else if(form1.sel2[form1.sel2.selectedIndex].text == "Motrolla"){
+                y.style.display = 'block';
+            }
+            else if(form1.sel2[form1.sel2.selectedIndex].text == "Iphone"){
+            document.getElementById('lab1').innerHTML=arr[3].names;
+            }
+            else{
+                document.write("nothing");
+            }
+        
+        }
+       // var x=  document.getElementById("series").style.visibility = "hidden";
+
+
+        // function update(){
+
+        //     if(form1.sel2[form1.sel2.selectedIndex].text == "Nokia"){
+                
+        //       document.getElementById('series') = 'block';
+
+        //     //     x.style.display = 'block';
+        //     console.log(y)
+
+        //     }
+        // }
+
+
+        function end(){
+             if(form2.sel3[form2.sel3.selectedIndex].text == "s10"){
+                document.getElementById('lab2').innerHTML=arr[0].ss10;
+
+                
+ }
+ else if(form2.sel3[form2.sel3.selectedIndex].text == "s20"){
+                document.getElementById('lab2').innerHTML=arr[0].ss20;
+
+                
+ }
+ else if(form2.sel3[form2.sel3.selectedIndex].text == "s30"){
+                document.getElementById('lab2').innerHTML=arr[0].ss30;
+
+                
+ }
+            else{
+                document.write("nothing");
+            }
+    }
+
+    function end2(){
+             if(form3.sel4[form3.sel4.selectedIndex].text == "N10"){
+                document.getElementById('lab2').innerHTML=arr[1].nn10;
+
+                
+ }
+ else if(form3.sel4[form3.sel4.selectedIndex].text == "N20"){
+                document.getElementById('lab2').innerHTML=arr[1].nn20;
+
+                
+ }
+ else if(form3.sel4[form3.sel4.selectedIndex].text  == "N30"){
+                document.getElementById('lab2').innerHTML=arr[1].nn30;
+
+                
+ }
+            else{
+                document.write("nothing");
+            }
+    }
+    </script>
+</body>
+</html>
